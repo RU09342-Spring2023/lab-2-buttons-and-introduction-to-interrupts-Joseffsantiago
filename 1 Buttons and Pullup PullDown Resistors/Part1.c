@@ -3,7 +3,7 @@
  *
  *  Created on: Feb 2, 2023
  *      Author: Joseff Santiago
- *      Version: 1.0
+ *      Version: 1.1
  *
  *      This example will show you how to configure the Pull-up Resistor for your button inputs.
  *
