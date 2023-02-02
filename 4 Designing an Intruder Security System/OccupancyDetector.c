@@ -7,9 +7,16 @@
 
 #include <msp430.h>
 
-int main() {
-    void gpioInit();
+void gpioInit();
 
+int main() {
+    gpioInit();                 //calls the function to initialize the pins and ports and doodads
+    WDTCTL = WDTPW | WDTHOLD;   // stop watchdog timer
+    PM5CTL0 &= ~LOCKLPM5;       //not sure what this does but it was in every other thing so i put it here
+
+    while(1){
+
+    }
 }
 
 
