@@ -27,7 +27,8 @@ int main(void)
     P1OUT &= ~BIT0;                         // Clear P1.0 output latch for a defined power-on state
     P1DIR |= BIT0;                          // Set P1.0 to output direction
 
-    // @TODO You need to add in the configuration for the Green LED
+    P6OUT &= ~BIT6;                         //Them greenies be initialized
+    P6DIR |= BIT6;                          // Configure P6.6 to an Output
 
     P2OUT |= BIT3;                          // Configure P2.3 as pulled-up
     P2REN |= BIT3;                          // P2.3 pull-up register enable
@@ -61,4 +62,3 @@ __interrupt void Port_2(void)
     P2IFG &= ~BIT3;                         // Clear P1.3 IFG
     ToggleEnable ^= 0x01;                   // Enable if the toggle should be active
 }
-
