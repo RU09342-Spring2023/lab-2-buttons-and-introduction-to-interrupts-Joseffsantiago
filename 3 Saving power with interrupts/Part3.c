@@ -32,8 +32,8 @@ int main(){
 void runCodeWithSoftwarePolling(){
 
     P6DIR |= BIT6;              // Configure P6.6 to an Output
-    P2DIR &= ~BIT3;             // Configure P2.3 to an Input
 
+    P2DIR &= ~BIT3;             // Configure P2.3 to an Input
     P2REN |= BIT3;               // Enable Resistor on P2.3
     P2OUT |= BIT3;               // Configure Resistor on P2.3 to be Pullup
 
