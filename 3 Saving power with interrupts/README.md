@@ -76,12 +76,12 @@ Then load up Energy Trace and perform the similar capture of Power with the LED 
 
 
 # Screenshots and Answers to Questions
-** Code with interrupts **
+ Code with Interrupts 
 ![image](https://user-images.githubusercontent.com/89939311/216458439-eb2c5fbf-9864-4522-b75a-e84f94a4c079.png)
 
-** Code with Software interrupts **
+ Code with Polling 
 ![image](https://user-images.githubusercontent.com/89939311/216459505-eb239815-ea60-49ca-a405-364fff4fbb7b.png)
 
-
-** 1. **
-
+Answers to Questions: 
+  1. The software polling function consumes more power than the hardware interrupt because CPU in the polling function is constantly checking the state of the button, wasting processor cycles. The interrupt version does not waste power running the entire program in each cycle, rather it only runs the LED portion of the program when it detects the button press.
+  2. 
