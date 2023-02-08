@@ -10,12 +10,20 @@
 void gpioInit();
 
 int main() {
+    int state;
     gpioInit();                 //calls the function to initialize the pins and ports and doodads
     WDTCTL = WDTPW | WDTHOLD;   // stop watchdog timer
     PM5CTL0 &= ~LOCKLPM5;       //not sure what this does but it was in every other thing so i put it here
 
     while(1){
-
+            if{}
+            else if{}
+            else if{}
+            else{state==1;}
+      switch(state)
+      case 1: break;
+      case 2: break;
+      case 3: break;
     }
 }
 
