@@ -16,9 +16,6 @@
 
 void gpioInit();
 
-/**
- * main.c
- */
 int main(void)
 {
     WDTCTL = WDTPW | WDTHOLD;   // stop watchdog timer
@@ -32,9 +29,9 @@ int main(void)
 
     while(1)
     {
-        if(~P2IN & BIT3){            // If S2 (P2.3) is pressed
+        if(~P2IN & BIT3){           // If S2 (P2.3) is pressed
             P6OUT ^= BIT6;}         // pause the blinking on P6.6
-        if(~P4IN & BIT1){            // If S1 (P4.1) is pressed
+        if(~P4IN & BIT1){           // If S1 (P4.1) is pressed
             P1OUT ^= BIT0;}         // pause the blinking P1.0
         __delay_cycles(250000);     // Delay for 100000*(1/MCLK)=0.1s
     }
