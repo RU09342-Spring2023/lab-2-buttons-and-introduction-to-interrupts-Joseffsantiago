@@ -17,19 +17,19 @@ int main() {
     PM5CTL0 &= ~LOCKLPM5;       //not sure what this does but it was in every other thing so i put it here
 
     while(1){
-            if(P4IN&BIT1){
+            if((P4IN&BIT1)&(i<=9)){
                 state=2;
                 i++;
                 __delay_cycles(1000000);
             }
-            else if(i>=10){
+            else if((P4IN&BIT1)&(i>=10)){
                 state=3;
             }
-            else{state==1;}
-      switch(state)
+            else {state=1;}
+      switch(state){
       case 1: P1OUT ^= BIT0; P6OUT &=~BIT6; __delay_cycles(500000); break;
       case 2: P1OUT &=~BIT0; P6OUT ^= BIT6; __delay_cycles(250000); break;
-      case 3: P1OUT &=~BIT0; P6OUT |= BIT6; break;
+      case 3: P1OUT &=~BIT0; P6OUT |= BIT6; break;}
     }
 }
 
